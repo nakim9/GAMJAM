@@ -10,7 +10,7 @@ class Window < Gosu::Window
     @song.volume = 0.25
     #@song.play(true)
     @sol=PlateForme.new(0,height-10,width,10)
-    @pla1=PlateForme.new(0,height-50,100,10)
+    @pla1=PlateForme.new(100,height-50,100,10)
   end
 
   # fonction appelée 60 fois par seconde
