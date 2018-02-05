@@ -10,7 +10,7 @@ class Hero
     @radius = 10
     # vitesse (de base 0 : à l'arret)
     @velocityX = 0.0
-    @velocityY = 0.0
+    @velocityY = 1.0
     #image du personnage
     @image = Gosu::Image.new("res/hero.png")
   end
@@ -49,7 +49,9 @@ class Hero
     @y += @velocityY
     @y %= 576
     @velocityX *= 0.96
+    if @velocityY<1
     @velocityY *= 0.96
+    end
   end
 
   def enContact (other)
