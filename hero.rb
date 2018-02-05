@@ -1,12 +1,13 @@
 # classe Héros
 
 class Hero
-
+  attr_reader :x, :y
   # constructeur
   def initialize(x, y)
     # coordonnées
     @x = x
     @y = y
+    @radius = 10
     # vitesse (de base 0 : à l'arret)
     @velocityX = 0.0
     @velocityY = 0.0
@@ -49,6 +50,13 @@ class Hero
     @y %= 576
     @velocityX *= 0.96
     @velocityY *= 0.96
+  end
+
+  def enContact (other)
+    if Gosu.distance(@x, @y, other.x, other.y) < 150
+        @velocityX += 0.5
+    end
+
   end
 
 end
