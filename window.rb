@@ -5,6 +5,7 @@ class Window < Gosu::Window
     self.caption = "Mon jeu"
     @background_image = Gosu::Image.new("res/picture.jpg")
     @hero = Hero.new(width/2, height/2)
+    @enemie = Hero.new(width/3, height/2)
     @song = Gosu::Song.new("res/music.mp3")
     @song.volume = 0.25
     @song.play(true)
@@ -20,6 +21,8 @@ class Window < Gosu::Window
     #@hero.go_down if Gosu::button_down?(Gosu::KbDown)
     # la fonction move est appelée dans tous les cas
     @hero.move
+    @enemie.move
+    @hero.enContact(@enemie)
     # fermer la fenêtre si la touche pressée est Echap
     close if Gosu::button_down?(Gosu::KbEscape)
   end
@@ -27,7 +30,7 @@ class Window < Gosu::Window
   def draw
     @background_image.draw(0, 0, ZOrder::Background)
     @hero.draw
-    @sol.draw
+    @enemie.draw
   end
 
 end
