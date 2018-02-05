@@ -5,6 +5,8 @@ require_relative 'z_order'
 require_relative 'hero'
 require_relative 'window'
 require_relative 'plateForme'
+require_relative 'map'
+
 
 
 WindowWidth = 1024

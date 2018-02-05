@@ -1,20 +1,19 @@
 # classe map
 
 class Map
+  attr_reader :list
  def initialize()
   #constructeur
-  @list = array.new
+  @list = Array.new
  end
 
-def add(plateForme)
+ def add(plateForme)
   @list.push(plateForme)
-end
+ end
 
-
-
-
-
-def draw
-  Gosu::draw_rect(@x, @y, @plateFormeWidth, @plateFormeHeight,  Gosu::Color.new(255, 255, 0, 0)) # Rectangle rougec
-end
+ def draw
+  @list.each do |i|
+    i.draw
+  end
+ end
 end
