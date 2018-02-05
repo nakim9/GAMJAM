@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 class Window < Gosu::Window
 
   def initialize(width, height)
@@ -31,4 +29,3 @@ class Window < Gosu::Window
   end
 
 end
->>>>>>> fbf0a6fdc8bb7130ea8c5e781dde77d1c4c45e68
