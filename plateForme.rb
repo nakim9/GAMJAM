@@ -1,6 +1,7 @@
 # classe plateForme
 
 class PlateForme
+  attr_reader :x, :y
  def initialize(x,y,plateFormeWidth,plateFormeHeight)
   #constructeur
   @x = x

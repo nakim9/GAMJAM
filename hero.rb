@@ -38,9 +38,9 @@ class Hero
   end
 
   # vitesse en y augmente (équivaut à un déplacement vers le bas)
-  #def go_down
-  #  @velocityY += 0.5
-  #end
+  def go_down
+    @velocityY += 0.5
+  end
 
   # modification des coordonées du héros
   def move
@@ -50,15 +50,20 @@ class Hero
     @y %= 576
     @velocityX *= 0.96
     if @velocityY<1
+<<<<<<< HEAD
     @velocityY *= 0.96
+=======
+      @velocityY *= 0.96
+>>>>>>> e2391f0c4c7cc7fc8a85ff51a6d33ce1f60481de
     end
   end
 
   def enContact (other)
-    if Gosu.distance(@x, @y, other.x, other.y) < 150
-        @velocityX += 0.5
+    
+    if Gosu.distance(@x, @y, @x, other.y) < 150
+        @velocityY = 0
     end
-
+    return Gosu.distance(@x, @y, @x, other.y) < 150
   end
 
 end

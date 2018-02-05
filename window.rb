@@ -22,7 +22,8 @@ class Window < Gosu::Window
     # la fonction move est appelée dans tous les cas
     @hero.move
     @enemie.move
-    @hero.enContact(@enemie)
+    @hero.enContact(@sol)
+
     # fermer la fenêtre si la touche pressée est Echap
     close if Gosu::button_down?(Gosu::KbEscape)
   end
