@@ -3,6 +3,8 @@ require 'gosu'
 
 # inclure le fichier window.rb
 require_relative 'window'
+require_relative 'z_order'
+require_relative 'hero'
 
 # variables largeur et hauteur de la fenêtre
 WindowWidth = 1024
