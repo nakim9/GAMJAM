@@ -6,7 +6,7 @@ class Window < Gosu::Window
     @background_image = Gosu::Image.new("res/picture.jpg")
     @hero = Hero.new(width/2, height/2)
     @song = Gosu::Song.new("res/music.mp3")
-    @song.volume = 0.25
+    @song.volume = 0.01
     @song.play(true)
   end
 
