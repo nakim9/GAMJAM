@@ -9,6 +9,7 @@ class Window < Gosu::Window
     @song = Gosu::Song.new("res/music.mp3")
     @song.volume = 0.25
     @song.play(true)
+    @sol=PlateForme.new(0,height-10,width,10)
   end
 
   # fonction appelée 60 fois par seconde
@@ -30,6 +31,7 @@ class Window < Gosu::Window
     @background_image.draw(0, 0, ZOrder::Background)
     @hero.draw
     @enemie.draw
+    @sol.draw
   end
 
 end
