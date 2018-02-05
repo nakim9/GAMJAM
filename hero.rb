@@ -31,10 +31,10 @@ class Hero
 
   # vitesse en y diminue (équivaut à un déplacement vers le haut)
   def go_up
-    @velocityY -= 10
+    @velocityY -= 25
     move
     sleep(1.0/24.0)
-    @velocityY += 10
+    @velocityY += 25
   end
 
   # vitesse en y augmente (équivaut à un déplacement vers le bas)
@@ -50,16 +50,12 @@ class Hero
     @y %= 576
     @velocityX *= 0.96
     if @velocityY<1
-<<<<<<< HEAD
     @velocityY *= 0.96
-=======
-      @velocityY *= 0.96
->>>>>>> e2391f0c4c7cc7fc8a85ff51a6d33ce1f60481de
     end
   end
 
   def enContact (other)
-    
+
     if Gosu.distance(@x, @y, @x, other.y) < 150
         @velocityY = 0
     end
