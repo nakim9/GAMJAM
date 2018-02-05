@@ -31,12 +31,14 @@ class Hero
   # vitesse en y diminue (équivaut à un déplacement vers le haut)
   def go_up
     @velocityY -= 0.5
+    sleep(1.0/24.0)
+    #@velocityY += 0.5
   end
 
   # vitesse en y augmente (équivaut à un déplacement vers le bas)
-  def go_down
-    @velocityY += 0.5
-  end
+  #def go_down
+  #  @velocityY += 0.5
+  #end
 
   # modification des coordonées du héros
   def move

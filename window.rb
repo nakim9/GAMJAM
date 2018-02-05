@@ -1,22 +1,22 @@
-# classe fille Window qui hérite de la classe Window de Gosu
 class Window < Gosu::Window
 
-  # constructeur de la classe Window
   def initialize(width, height)
-    # appel au constructeur de la classe Gosu::Window
     super
-    # nom de la fenetre
     self.caption = "Mon jeu"
     @background_image = Gosu::Image.new("res/picture.jpg")
-    @hero = Hero.new(width/4, height/4)
-    @sol = Sol.new()
+    @hero = Hero.new(width/2, height/2)
+    @song = Gosu::Song.new("res/music.mp3")
+    @song.volume = 0.25
+    @song.play(true)
   end
+
+  # fonction appelée 60 fois par seconde
   def update
     # FAIRE fonction SI indiceTouchePressée EST touche
     @hero.go_left if Gosu::button_down?(Gosu::KbLeft)
     @hero.go_right if Gosu::button_down?(Gosu::KbRight)
     @hero.go_up if Gosu::button_down?(Gosu::KbUp)
-    @hero.go_down if Gosu::button_down?(Gosu::KbDown)
+    #@hero.go_down if Gosu::button_down?(Gosu::KbDown)
     # la fonction move est appelée dans tous les cas
     @hero.move
     # fermer la fenêtre si la touche pressée est Echap
@@ -26,6 +26,6 @@ class Window < Gosu::Window
   def draw
     @background_image.draw(0, 0, ZOrder::Background)
     @hero.draw
-    @sol.draw
   end
+
 end
