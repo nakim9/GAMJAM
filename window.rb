@@ -7,15 +7,10 @@ class Window < Gosu::Window
     @hero = Hero.new(width/2, height/2)
     @enemie = Hero.new(width/3, height/2)
     @song = Gosu::Song.new("res/music.mp3")
-<<<<<<< HEAD
-    @song.volume = 0.01
-    @song.play(true)
-=======
     @song.volume = 0.25
     #@song.play(true)
     @sol=PlateForme.new(0,height-10,width,10)
     @pla1=PlateForme.new(0,height-50,100,10)
->>>>>>> e4762452bf4c5f80d2f681bf91116c26270b3782
   end
 
   # fonction appelée 60 fois par seconde
