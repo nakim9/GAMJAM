@@ -31,10 +31,10 @@ class Hero
 
   # vitesse en y diminue (équivaut à un déplacement vers le haut)
   def go_up
-    @velocityY -= 10
+    @velocityY -= 25
     move
     sleep(1.0/24.0)
-    @velocityY += 10
+    @velocityY += 25
   end
 
   # vitesse en y augmente (équivaut à un déplacement vers le bas)
@@ -50,7 +50,7 @@ class Hero
     @y %= 576
     @velocityX *= 0.96
     if @velocityY<1
-      @velocityY *= 0.96
+    @velocityY *= 0.96
     end
   end
 
