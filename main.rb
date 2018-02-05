@@ -4,6 +4,7 @@ require 'gosu'
 require_relative 'z_order'
 require_relative 'hero'
 require_relative 'window'
+require_relative 'plateForme'
 
 WindowWidth = 1024
 WindowHeight = 576
