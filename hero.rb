@@ -55,9 +55,15 @@ class Hero
   end
 
   def enContact (other)
-    
-    if Gosu.distance(@x, @y, @x, other.y) < 150
+    #permet de pouvoir aller sur des plateformes
+    if @x>other.x && @x<(other.x + other.plateFormeWidth)
+      if Gosu.distance(@x, @y, @x, other.y) < 150
         @velocityY = 0
+      end
+    elsif @y>other.y && @y<(other.y+other.plateFormeHeight)
+      if Gosu.distance(@x, @y, other.x, @y) < 150
+        @velocityX = 0
+      end
     end
     return Gosu.distance(@x, @y, @x, other.y) < 150
   end
